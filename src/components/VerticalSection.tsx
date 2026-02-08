@@ -30,7 +30,7 @@ export default function VerticalSection() {
                 黒毛和牛の真髄を
               </p>
               <p>
-                ウォールナットの
+                木の
                 <br />
                 温もりに包まれた空間で
                 <br />

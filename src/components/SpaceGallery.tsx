@@ -20,7 +20,7 @@ const spaces = [
     src: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80&fit=crop",
     alt: "テーブル席",
     title: "テーブル席",
-    description: "ウォールナットの温もりに包まれた、落ち着いた空間",
+    description: "木の温もりに包まれた、落ち着いた空間",
   },
 ];
 
@@ -44,7 +44,7 @@ export default function SpaceGallery() {
           </h2>
           <div className="gold-divider mx-auto mt-6" />
           <p className="text-washi/40 text-sm mt-6 tracking-wider">
-            ウォールナットと柔らかな灯りが織りなす、隠れ家のような空間
+            木と柔らかな灯りが織りなす、隠れ家のような空間
           </p>
         </motion.div>
 
