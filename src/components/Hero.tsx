@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1920&q=80&fit=crop"
+          src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1920&q=80&fit=crop"
           alt="炭火で焼き上げる厳選和牛"
           fill
           className="object-cover"
