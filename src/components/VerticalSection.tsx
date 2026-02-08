@@ -60,7 +60,7 @@ export default function VerticalSection() {
           >
             <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
               <Image
-                src="https://images.unsplash.com/photo-1558030006-450675393462?w=800&q=80&fit=crop"
+                src="/concept.jpg"
                 alt="厳選された和牛"
                 fill
                 className="object-cover"

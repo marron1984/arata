@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const spaces = [
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80&fit=crop",
+    src: "/space1.jpg",
     alt: "カウンター席",
     title: "カウンター",
     description: "目の前で焼き上がる臨場感をお楽しみください",
   },
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80&fit=crop",
+    src: "/space2.jpg",
     alt: "個室",
     title: "完全個室",
     description: "接待・記念日に最適な、完全個室をご用意",
   },
   {
-    src: "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&q=80&fit=crop",
+    src: "/space3.jpg",
     alt: "テーブル席",
     title: "テーブル席",
     description: "木の温もりに包まれた、落ち着いた空間",
