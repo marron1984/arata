@@ -100,7 +100,7 @@ export default function SpaceGallery() {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           {[
-            { label: "席数", value: "全20席" },
+            { label: "席数", value: "全38席【貸切可能】" },
             { label: "テーブル", value: "目線が気にならないテーブル席" },
             { label: "雰囲気", value: "落ち着いた大人の隠れ家" },
           ].map((info) => (
