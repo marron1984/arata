@@ -26,8 +26,8 @@ export default function Footer() {
           {/* Info */}
           <div className="space-y-2 text-washi/30 text-xs tracking-wider">
             <p>大阪府大阪市都島区東野田町1-20-16</p>
-            <p>TEL: 050-5596-8469</p>
-            <p>営業時間: 15:00〜23:30（L.O. 22:30）</p>
+            <p>TEL: 06-6809-7829</p>
+            <p>営業時間: 17:00〜23:00（L.O 22:30）</p>
             <p>定休日: 水曜日</p>
           </div>
 

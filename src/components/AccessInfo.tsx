@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const infoItems = [
   { label: "店名", value: "やきにく 新（あらた）" },
   { label: "住所", value: "大阪府大阪市都島区東野田町1-20-16" },
-  { label: "電話", value: "050-5596-8469", href: "tel:050-5596-8469" },
+  { label: "電話", value: "06-6809-7829", href: "tel:06-6809-7829" },
   {
     label: "営業時間",
-    value: "15:00〜23:30（L.O. 22:30）",
+    value: "17:00〜23:00（L.O 22:30）",
   },
   { label: "定休日", value: "水曜日" },
   { label: "アクセス", value: "京橋駅より徒歩5分 / 大阪城北詰駅より徒歩3分" },
