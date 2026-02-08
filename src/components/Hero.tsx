@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, type Variants } from "framer-motion";
-import Image from "next/image";
 
 const fadeIn: Variants = {
   hidden: { opacity: 0 },
@@ -42,13 +41,12 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=80&fit=crop"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero.jpg"
           alt="厳選された黒毛和牛"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
         />
         {/* Dark overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/40 to-ink" />
