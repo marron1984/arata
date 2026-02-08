@@ -12,9 +12,9 @@ const spaces = [
   },
   {
     src: "/space2.jpg",
-    alt: "個室",
-    title: "完全個室",
-    description: "接待・記念日に最適な、完全個室をご用意",
+    alt: "テーブル席",
+    title: "テーブル席",
+    description: "目線が気にならない、落ち着いたテーブル席",
   },
   {
     src: "/space3.jpg",
@@ -101,7 +101,7 @@ export default function SpaceGallery() {
         >
           {[
             { label: "席数", value: "全20席" },
-            { label: "個室", value: "完全個室あり（最大6名様）" },
+            { label: "テーブル", value: "目線が気にならないテーブル席" },
             { label: "雰囲気", value: "落ち着いた大人の隠れ家" },
           ].map((info) => (
             <div key={info.label}>
