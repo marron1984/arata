@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 interface MenuItem {
   name: string;
@@ -83,20 +82,17 @@ const menuData: MenuCategory[] = [
 ];
 
 export default function MenuGrid() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <section
       id="menu"
-      ref={ref}
       className="relative py-32 md:py-40 bg-walnut-dark/30"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
@@ -118,7 +114,8 @@ export default function MenuGrid() {
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{
                 duration: 1,
                 delay: 0.2 * catIndex,
@@ -161,8 +158,9 @@ export default function MenuGrid() {
         {/* Note */}
         <motion.p
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 1, delay: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="text-center text-washi/30 text-xs mt-20 tracking-wider"
         >
           ※ 仕入れ状況により内容が変更となる場合がございます

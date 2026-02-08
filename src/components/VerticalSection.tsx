@@ -1,17 +1,12 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function VerticalSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
     <section
       id="concept"
-      ref={ref}
       className="relative py-32 md:py-40 overflow-hidden grain-overlay"
     >
       {/* Background accent */}
@@ -22,7 +17,8 @@ export default function VerticalSection() {
           {/* Left: Vertical text */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, ease: "easeOut" }}
             className="relative flex flex-col md:flex-row items-center md:items-start gap-12"
           >
@@ -57,7 +53,8 @@ export default function VerticalSection() {
           {/* Right: Image + description */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
             className="relative"
           >

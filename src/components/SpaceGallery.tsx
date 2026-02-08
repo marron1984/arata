@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const spaces = [
@@ -26,16 +25,14 @@ const spaces = [
 ];
 
 export default function SpaceGallery() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section id="space" ref={ref} className="relative py-32 md:py-40">
+    <section id="space" className="relative py-32 md:py-40">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
@@ -57,7 +54,8 @@ export default function SpaceGallery() {
             <motion.div
               key={space.title}
               initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{
                 duration: 1,
                 delay: 0.2 * index,
@@ -96,8 +94,9 @@ export default function SpaceGallery() {
         {/* Additional info */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 1, delay: 0.8 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 1, delay: 0.3 }}
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           {[

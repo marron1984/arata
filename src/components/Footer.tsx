@@ -1,18 +1,15 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
-
   return (
-    <footer ref={ref} className="relative py-20 bg-ink border-t border-walnut/10">
+    <footer className="relative py-20 bg-ink border-t border-walnut/10">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 1.2 }}
           className="text-center"
         >

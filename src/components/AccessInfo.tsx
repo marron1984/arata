@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 const infoItems = [
   { label: "店名", value: "やきにく 新（あらた）" },
@@ -18,20 +17,17 @@ const infoItems = [
 ];
 
 export default function AccessInfo() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <section
       id="access"
-      ref={ref}
       className="relative py-32 md:py-40 bg-walnut-dark/20"
     >
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
@@ -48,7 +44,8 @@ export default function AccessInfo() {
           {/* Info list */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           >
             <div className="space-y-6">
@@ -86,7 +83,8 @@ export default function AccessInfo() {
           {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
             className="relative"
           >
