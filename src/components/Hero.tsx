@@ -9,8 +9,8 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=80&fit=crop"
-          alt="厳選された黒毛和牛"
+          src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1920&q=80&fit=crop"
+          alt="炭火で焼き上げる厳選和牛"
           fill
           className="object-cover"
           priority
