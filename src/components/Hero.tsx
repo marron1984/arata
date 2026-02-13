@@ -44,7 +44,7 @@ export default function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/hero.jpg"
-          alt="厳選された黒毛和牛"
+          alt="人気No.1 上塩タン"
           className="absolute inset-0 w-full h-full object-cover"
           loading="eager"
         />
@@ -66,6 +66,16 @@ export default function Hero() {
           className="w-px h-16 bg-gradient-to-b from-transparent via-gold to-transparent mb-8 origin-top"
           style={{ animation: "lineGrow 1.5s ease-out forwards" }}
         />
+
+        {/* Catchcopy */}
+        <motion.p
+          variants={fadeIn}
+          custom={0.3}
+          className="text-washi/50 text-xs md:text-sm tracking-[0.2em] mb-6"
+          style={{ animation: "heroFadeIn 1.5s ease-out 0.3s both" }}
+        >
+          大阪京橋 タンが美味いと噂の大衆焼肉店
+        </motion.p>
 
         {/* Logo character */}
         <motion.h1
@@ -90,10 +100,10 @@ export default function Hero() {
         <motion.p
           variants={slideUp}
           custom={1.5}
-          className="text-washi/40 text-xs tracking-[0.3em] mt-6"
+          className="text-washi/60 text-sm md:text-lg tracking-[0.2em] mt-6 font-medium"
           style={{ animation: "heroFadeIn 1.5s ease-out 1.5s both" }}
         >
-          京橋の隠れ家で、至福のひとときを
+          肉でお腹いっぱいに
         </motion.p>
 
         {/* Decorative line bottom */}

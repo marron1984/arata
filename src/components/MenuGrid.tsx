@@ -1,6 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+const menuPhotos = [
+  { src: "/menu-tan.jpg", alt: "人気No.1 上塩タン", label: "人気No.1 上塩タン" },
+  { src: "/menu-meat.jpg", alt: "厳選された焼肉", label: "" },
+  { src: "/menu-set.jpg", alt: "満肉盛り合わせ", label: "" },
+];
 
 interface MenuItem {
   name: string;
@@ -58,8 +65,9 @@ const menuData: MenuCategory[] = [
       },
       {
         name: "上塩タン",
-        description: "",
+        description: "当店人気No.1！まずはコレを食べて欲しい",
         price: "¥1,518",
+        badge: "人気No.1",
       },
       {
         name: "特選ハラミ",
@@ -280,6 +288,35 @@ export default function MenuGrid() {
           <p className="text-washi/40 text-sm mt-6 tracking-wider">
             肉でおなかと心を満たしたい
           </p>
+        </motion.div>
+
+        {/* Menu photos */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          className="grid grid-cols-3 gap-3 md:gap-6 mb-20"
+        >
+          {menuPhotos.map((photo) => (
+            <div key={photo.src} className="relative aspect-square overflow-hidden group">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 768px) 33vw, 300px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+              {photo.label && (
+                <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4">
+                  <span className="text-gold text-[10px] md:text-xs tracking-wider font-medium">
+                    {photo.label}
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
         </motion.div>
 
         {/* Menu categories */}
