@@ -6,6 +6,7 @@ interface MenuItem {
   name: string;
   description: string;
   price?: string;
+  badge?: string;
 }
 
 interface MenuCategory {
@@ -15,67 +16,240 @@ interface MenuCategory {
 
 const menuData: MenuCategory[] = [
   {
-    title: "極みコース",
+    title: "名物",
     items: [
       {
-        name: "新 おまかせコース",
+        name: "満肉盛り合わせ 2人前〜",
         description:
-          "料理長が厳選した本日の最高部位を、最適な順序でお届けする当店の看板コース",
-        price: "¥12,000",
+          "迷ったらコレ！！肉のオールスター（タン・ハラミ以外）",
+        price: "¥3,580",
+        badge: "おすすめ",
       },
       {
-        name: "特選 黒毛和牛コース",
+        name: "和牛しゃぶロース",
         description:
-          "A5ランク黒毛和牛の希少部位を中心に、前菜からデザートまで堪能いただく特別コース",
-        price: "¥15,000",
+          "一枚を一口で頬張って食べることでお肉のうまみを存分に味わえます。ご飯必須！！！",
+        price: "¥1,078",
+        badge: "おすすめ",
       },
       {
-        name: "接待・記念日コース",
+        name: "ハラミユッケ",
         description:
-          "特別な日にふさわしい至高の品々をご用意いたします",
-        price: "¥20,000",
+          "全国から選び抜かれた美味い品物だけを使用。昔ながらの甘いタレとの相性は抜群",
+        price: "¥1,408",
+        badge: "おすすめ",
+      },
+      {
+        name: "ニンニク薬味爆弾",
+        description:
+          "次の日のことなんて気にせず思い切って頬張って欲しい。背徳感薬味",
+        price: "¥418",
       },
     ],
   },
   {
-    title: "希少部位",
+    title: "肉",
     items: [
       {
-        name: "極ハラミ",
-        description: "A5ランク和牛の中でも特に脂の乗りが良い、当店自慢の逸品",
+        name: "特上タン",
+        description: "数量限定",
+        price: "¥2,508",
+        badge: "限定",
       },
       {
-        name: "シャトーブリアン",
-        description: "ヒレの中心部のみを使用した、最も柔らかく上品な味わい",
+        name: "上塩タン",
+        description: "",
+        price: "¥1,518",
       },
       {
-        name: "焼きしゃぶロース",
-        description: "薄切りロースを軽く炙り、黄身しょうゆでお召し上がりください",
+        name: "特選ハラミ",
+        description: "数量限定",
+        price: "¥2,508",
+        badge: "限定",
       },
       {
-        name: "ザブトン",
-        description: "肩ロースの芯、きめ細かなサシが美しい希少な部位",
+        name: "上ハラミ",
+        description: "",
+        price: "¥1,408",
+      },
+      {
+        name: "ヘレ",
+        description: "",
+        price: "¥1,980",
+      },
+      {
+        name: "上ロース",
+        description: "",
+        price: "¥1,980",
+      },
+      {
+        name: "ロース",
+        description: "",
+        price: "¥1,518",
+      },
+      {
+        name: "ネギカルビ",
+        description: "味噌だれとネギの相性は抜群",
+        price: "¥1,408",
+        badge: "おすすめ",
+      },
+      {
+        name: "上赤身",
+        description: "",
+        price: "¥1,298",
+      },
+      {
+        name: "塩コウネ",
+        description: "薄切りコウネとレモンの相性◯",
+        price: "¥1,298",
+        badge: "おすすめ",
+      },
+      {
+        name: "黒タンツラ",
+        description: "",
+        price: "¥968",
       },
     ],
   },
   {
-    title: "逸品",
+    title: "ホルモン",
     items: [
       {
-        name: "極ハラミ刺",
-        description: "新鮮なハラミをポン酢と柚子胡椒で味わう、当店の名物",
+        name: "味噌ホルモン盛り《うま辛》",
+        description: "10食限定",
+        price: "¥1,738",
+        badge: "おすすめ",
       },
       {
-        name: "和牛ユッケ",
-        description: "厳選された赤身を特製ダレと卵黄で",
+        name: "ミノ",
+        description: "",
+        price: "¥968",
       },
       {
-        name: "炙りにぎり",
-        description: "口の中でとろける和牛の握り寿司",
+        name: "シマチョウ",
+        description: "",
+        price: "¥858",
       },
       {
-        name: "ホルモンミックス",
-        description: "丁寧に下処理した新鮮なホルモンの盛り合わせ",
+        name: "アカセン",
+        description: "",
+        price: "¥858",
+      },
+      {
+        name: "ウルテ",
+        description: "",
+        price: "¥638",
+      },
+      {
+        name: "ハツ",
+        description: "",
+        price: "¥638",
+      },
+      {
+        name: "コリコリ",
+        description: "",
+        price: "¥638",
+      },
+      {
+        name: "旨い 鶏モモ",
+        description: "",
+        price: "¥748",
+      },
+      {
+        name: "ウィンナー",
+        description: "",
+        price: "¥528",
+      },
+    ],
+  },
+  {
+    title: "一品",
+    items: [
+      {
+        name: "生センマイ",
+        description: "鮮度抜群！自家製のチョジャン",
+        price: "¥858",
+      },
+      {
+        name: "ウルテ湯引き",
+        description: "",
+        price: "¥748",
+      },
+      {
+        name: "コリコリ湯引き",
+        description: "",
+        price: "¥748",
+      },
+      {
+        name: "スタミナハート",
+        description: "",
+        price: "¥748",
+        badge: "おすすめ",
+      },
+      {
+        name: "キムチ盛り合わせ",
+        description: "3種の盛り合わせ",
+        price: "¥748",
+      },
+      {
+        name: "ナムル盛り合わせ",
+        description: "※各種単品あり",
+        price: "¥748",
+      },
+      {
+        name: "サンチュ",
+        description: "",
+        price: "¥528",
+      },
+      {
+        name: "チョレギサラダ",
+        description: "",
+        price: "¥638",
+      },
+    ],
+  },
+  {
+    title: "ごはん・〆",
+    items: [
+      {
+        name: "ごはん",
+        description: "お米の美味しい焼肉屋ってなんかいいよね",
+        price: "¥330〜",
+      },
+      {
+        name: "ネギ玉ごはん（オンザライス用）",
+        description: "お肉と相性抜群 食べ疲れしないご飯",
+        price: "¥550",
+      },
+      {
+        name: "牛骨出汁タマゴスープ",
+        description: "",
+        price: "¥550",
+      },
+      {
+        name: "ビビンバ",
+        description: "",
+        price: "¥968",
+      },
+      {
+        name: "クッパ",
+        description: "",
+        price: "¥968",
+      },
+      {
+        name: "冷麺",
+        description: "",
+        price: "¥1,078",
+      },
+      {
+        name: "テールラーメン",
+        description: "",
+        price: "¥1,298",
+      },
+      {
+        name: "辛肉そば",
+        description: "",
+        price: "¥1,298",
       },
     ],
   },
@@ -104,7 +278,7 @@ export default function MenuGrid() {
           </h2>
           <div className="gold-divider mx-auto mt-6" />
           <p className="text-washi/40 text-sm mt-6 tracking-wider">
-            素材の力を最大限に引き出す、妥協なき品々
+            肉でおなかと心を満たしたい
           </p>
         </motion.div>
 
@@ -118,7 +292,7 @@ export default function MenuGrid() {
               viewport={{ once: true, margin: "-80px" }}
               transition={{
                 duration: 1,
-                delay: 0.2 * catIndex,
+                delay: 0.15 * catIndex,
                 ease: "easeOut",
               }}
             >
@@ -132,22 +306,31 @@ export default function MenuGrid() {
               </div>
 
               {/* Items grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6">
                 {category.items.map((item) => (
                   <div key={item.name} className="group">
                     <div className="flex items-baseline justify-between gap-4">
-                      <h4 className="text-washi text-base tracking-wider group-hover:text-gold transition-colors duration-500">
-                        {item.name}
-                      </h4>
+                      <div className="flex items-center gap-2">
+                        <h4 className="text-washi text-base tracking-wider group-hover:text-gold transition-colors duration-500">
+                          {item.name}
+                        </h4>
+                        {item.badge && (
+                          <span className="text-[10px] text-gold/80 border border-gold/30 px-1.5 py-0.5 tracking-wider">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
                       {item.price && (
                         <span className="text-gold/60 text-sm tracking-wider whitespace-nowrap">
                           {item.price}
                         </span>
                       )}
                     </div>
-                    <p className="text-washi/40 text-xs mt-2 leading-relaxed tracking-wider">
-                      {item.description}
-                    </p>
+                    {item.description && (
+                      <p className="text-washi/40 text-xs mt-1.5 leading-relaxed tracking-wider">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
@@ -163,7 +346,8 @@ export default function MenuGrid() {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-center text-washi/30 text-xs mt-20 tracking-wider"
         >
-          ※ 仕入れ状況により内容が変更となる場合がございます
+          ※ 本日のおすすめは黒板メニューからご確認ください
+          <br />※ 仕入れ状況により内容が変更となる場合がございます
           <br />※ 表示価格は税込です
         </motion.p>
       </div>
