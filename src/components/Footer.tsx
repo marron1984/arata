@@ -31,6 +31,18 @@ export default function Footer() {
             <p>定休日: 水曜日</p>
           </div>
 
+          {/* Links */}
+          <div className="flex items-center justify-center mt-10">
+            <a
+              href="https://tabelog.com/osaka/A2701/A270107/27151551/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-washi/30 text-xs tracking-wider hover:text-gold transition-colors duration-500"
+            >
+              食べログ
+            </a>
+          </div>
+
           {/* Copyright */}
           <p className="text-washi/15 text-[10px] tracking-wider mt-12">
             &copy; {new Date().getFullYear()} やきにく 新. All rights reserved.
