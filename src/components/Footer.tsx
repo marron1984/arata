@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="relative py-20 bg-ink border-t border-walnut/10">
+    <footer className="relative py-20 bg-sumi border-t border-aka/20">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function Footer() {
             やきにく あらた
           </p>
 
-          <div className="gold-divider mx-auto my-8" />
+          <div className="aka-divider mx-auto my-8" />
 
           {/* Info */}
           <div className="space-y-2 text-washi/30 text-xs tracking-wider">

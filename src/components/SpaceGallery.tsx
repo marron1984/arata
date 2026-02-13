@@ -36,14 +36,14 @@ export default function SpaceGallery() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <span className="text-gold/50 text-xs tracking-[0.5em] uppercase">
+          <span className="text-aka text-xs tracking-[0.5em] uppercase font-bold">
             Space
           </span>
-          <h2 className="text-gold text-3xl md:text-4xl font-semibold mt-4 tracking-[0.2em]">
+          <h2 className="text-washi text-3xl md:text-4xl font-bold mt-4 tracking-[0.15em]">
             空間
           </h2>
-          <div className="gold-divider mx-auto mt-6" />
-          <p className="text-washi/40 text-sm mt-6 tracking-wider">
+          <div className="aka-divider mx-auto mt-6" />
+          <p className="text-washi/50 text-sm mt-6 tracking-wider font-medium">
             無垢の温かい木と柔らかな灯りが織りなす、隠れ家のような空間
           </p>
         </motion.div>
@@ -75,14 +75,14 @@ export default function SpaceGallery() {
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
 
                 {/* Border accent */}
-                <div className="absolute inset-3 border border-gold/0 group-hover:border-gold/20 transition-all duration-700" />
+                <div className="absolute inset-3 border border-aka/0 group-hover:border-aka/30 transition-all duration-700" />
 
                 {/* Text overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                  <h3 className="text-gold text-lg tracking-[0.2em] font-medium mb-2">
+                  <h3 className="text-washi text-lg tracking-[0.2em] font-bold mb-2">
                     {space.title}
                   </h3>
-                  <p className="text-washi/50 text-xs tracking-wider leading-relaxed">
+                  <p className="text-washi/60 text-xs tracking-wider leading-relaxed">
                     {space.description}
                   </p>
                 </div>
@@ -105,10 +105,10 @@ export default function SpaceGallery() {
             { label: "雰囲気", value: "落ち着いた大人の隠れ家" },
           ].map((info) => (
             <div key={info.label}>
-              <span className="text-gold/50 text-xs tracking-[0.3em]">
+              <span className="text-aka text-xs tracking-[0.3em] font-bold">
                 {info.label}
               </span>
-              <p className="text-washi/60 text-sm mt-2 tracking-wider">
+              <p className="text-washi/70 text-sm mt-2 tracking-wider font-medium">
                 {info.value}
               </p>
             </div>

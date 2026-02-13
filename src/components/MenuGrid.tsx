@@ -267,7 +267,7 @@ export default function MenuGrid() {
   return (
     <section
       id="menu"
-      className="relative py-32 md:py-40 bg-walnut-dark/30"
+      className="relative py-32 md:py-40 bg-sumi"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         {/* Section title */}
@@ -278,14 +278,14 @@ export default function MenuGrid() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <span className="text-gold/50 text-xs tracking-[0.5em] uppercase">
+          <span className="text-aka text-xs tracking-[0.5em] uppercase font-bold">
             Menu
           </span>
-          <h2 className="text-gold text-3xl md:text-4xl font-semibold mt-4 tracking-[0.2em]">
+          <h2 className="text-washi text-3xl md:text-4xl font-bold mt-4 tracking-[0.15em]">
             お品書き
           </h2>
-          <div className="gold-divider mx-auto mt-6" />
-          <p className="text-washi/40 text-sm mt-6 tracking-wider">
+          <div className="aka-divider mx-auto mt-6" />
+          <p className="text-washi/50 text-sm mt-6 tracking-wider font-medium">
             肉でおなかと心を満たしたい
           </p>
         </motion.div>
@@ -335,11 +335,13 @@ export default function MenuGrid() {
             >
               {/* Category title */}
               <div className="flex items-center gap-6 mb-10">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
-                <h3 className="text-gold/80 text-lg tracking-[0.3em] font-medium">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-washi/10 to-transparent" />
+                <h3 className="text-washi text-lg tracking-[0.3em] font-bold relative">
+                  <span className="text-aka mr-2">|</span>
                   {category.title}
+                  <span className="text-aka ml-2">|</span>
                 </h3>
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-washi/10 to-transparent" />
               </div>
 
               {/* Items grid */}
@@ -348,17 +350,23 @@ export default function MenuGrid() {
                   <div key={item.name} className="group">
                     <div className="flex items-baseline justify-between gap-4">
                       <div className="flex items-center gap-2">
-                        <h4 className="text-washi text-base tracking-wider group-hover:text-gold transition-colors duration-500">
+                        <h4 className="text-washi text-base tracking-wider font-medium group-hover:text-aka-light transition-colors duration-300">
                           {item.name}
                         </h4>
                         {item.badge && (
-                          <span className="text-[10px] text-gold/80 border border-gold/30 px-1.5 py-0.5 tracking-wider">
+                          <span className={`text-[10px] px-2 py-0.5 tracking-wider font-bold ${
+                            item.badge === "人気No.1"
+                              ? "bg-aka text-washi"
+                              : item.badge === "限定"
+                              ? "bg-gold/20 text-gold border border-gold/40"
+                              : "bg-aka/10 text-aka border border-aka/30"
+                          }`}>
                             {item.badge}
                           </span>
                         )}
                       </div>
                       {item.price && (
-                        <span className="text-gold/60 text-sm tracking-wider whitespace-nowrap">
+                        <span className="text-washi/70 text-sm tracking-wider whitespace-nowrap font-semibold">
                           {item.price}
                         </span>
                       )}

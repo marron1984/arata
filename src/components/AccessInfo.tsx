@@ -20,7 +20,7 @@ export default function AccessInfo() {
   return (
     <section
       id="access"
-      className="relative py-32 md:py-40 bg-walnut-dark/20"
+      className="relative py-32 md:py-40 bg-walnut-dark/30"
     >
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         {/* Section title */}
@@ -31,13 +31,13 @@ export default function AccessInfo() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center mb-20"
         >
-          <span className="text-gold/50 text-xs tracking-[0.5em] uppercase">
+          <span className="text-aka text-xs tracking-[0.5em] uppercase font-bold">
             Access
           </span>
-          <h2 className="text-gold text-3xl md:text-4xl font-semibold mt-4 tracking-[0.2em]">
+          <h2 className="text-washi text-3xl md:text-4xl font-bold mt-4 tracking-[0.15em]">
             ご案内
           </h2>
-          <div className="gold-divider mx-auto mt-6" />
+          <div className="aka-divider mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
@@ -54,7 +54,7 @@ export default function AccessInfo() {
                   key={item.label}
                   className="flex flex-col sm:flex-row gap-2 sm:gap-6 py-4 border-b border-walnut/20"
                 >
-                  <span className="text-gold/60 text-xs tracking-[0.2em] min-w-[80px] pt-0.5">
+                  <span className="text-aka text-xs tracking-[0.2em] min-w-[80px] pt-0.5 font-bold">
                     {item.label}
                   </span>
                   {item.href ? (
@@ -105,16 +105,16 @@ export default function AccessInfo() {
             <div className="mt-8 text-center">
               <a
                 href="tel:06-6809-7829"
-                className="inline-flex flex-col items-center gap-2 px-10 py-5 bg-gold/10 border border-gold/40 text-gold hover:bg-gold/20 hover:border-gold/60 transition-all duration-500 group"
+                className="inline-flex flex-col items-center gap-2 px-12 py-6 bg-aka text-washi hover:bg-aka-light transition-all duration-300 shadow-xl shadow-aka/20 group"
               >
-                <span className="flex items-center gap-2 text-sm tracking-[0.2em]">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 group-hover:animate-pulse">
+                <span className="flex items-center gap-2 text-base tracking-[0.2em] font-bold">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 group-hover:animate-pulse">
                     <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
                   </svg>
-                  お電話でご予約
+                  今すぐ電話予約
                 </span>
-                <span className="text-gold/70 text-lg tracking-[0.15em] font-semibold">06-6809-7829</span>
-                <span className="text-washi/30 text-[10px] tracking-wider">17:00〜23:00（水曜定休）</span>
+                <span className="text-washi/90 text-xl tracking-[0.15em] font-bold">06-6809-7829</span>
+                <span className="text-washi/50 text-[10px] tracking-wider">17:00〜23:00（水曜定休）</span>
               </a>
             </div>
           </motion.div>

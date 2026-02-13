@@ -59,12 +59,12 @@ export default function Header() {
               ))}
               <a
                 href="tel:06-6809-7829"
-                className="ml-4 flex items-center gap-2 px-6 py-2 bg-gold/10 border border-gold/30 text-gold text-sm tracking-[0.15em] hover:bg-gold/20 hover:border-gold/60 transition-all duration-500"
+                className="ml-4 flex items-center gap-2 px-6 py-2.5 bg-aka text-washi text-sm tracking-[0.15em] font-bold hover:bg-aka-light transition-all duration-300 shadow-lg shadow-aka/20"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
                   <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
                 </svg>
-                お電話予約
+                電話予約
               </a>
             </nav>
 
@@ -123,16 +123,16 @@ export default function Header() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="mt-6 flex flex-col items-center gap-2 px-10 py-4 bg-gold/10 border border-gold/30 text-gold hover:bg-gold/20 hover:border-gold/60 transition-all duration-500"
+                className="mt-8 flex flex-col items-center gap-2 px-12 py-5 bg-aka text-washi hover:bg-aka-light transition-all duration-300 shadow-xl shadow-aka/30"
                 onClick={() => setMenuOpen(false)}
               >
-                <span className="flex items-center gap-2 text-lg tracking-[0.2em]">
+                <span className="flex items-center gap-2 text-xl tracking-[0.2em] font-bold">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                     <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
                   </svg>
-                  お電話予約
+                  電話予約
                 </span>
-                <span className="text-gold/60 text-sm tracking-widest">06-6809-7829</span>
+                <span className="text-washi/80 text-base tracking-widest font-semibold">06-6809-7829</span>
               </motion.a>
             </nav>
           </motion.div>

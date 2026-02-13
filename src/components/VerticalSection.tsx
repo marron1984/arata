@@ -7,10 +7,10 @@ export default function VerticalSection() {
   return (
     <section
       id="concept"
-      className="relative py-32 md:py-40 overflow-hidden grain-overlay"
+      className="relative py-32 md:py-40 overflow-hidden grain-overlay bg-ink"
     >
       {/* Background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-walnut-dark/20" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-walnut-dark/30" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-center">
@@ -23,7 +23,7 @@ export default function VerticalSection() {
             className="relative flex flex-col md:flex-row items-center md:items-start gap-12"
           >
             {/* Vertical Japanese text */}
-            <div className="vertical-rl h-[400px] md:h-[500px] text-washi/90 text-lg md:text-xl leading-loose tracking-widest">
+            <div className="vertical-rl h-[400px] md:h-[500px] text-washi text-lg md:text-xl leading-loose tracking-widest font-medium">
               <p className="mb-8">
                 一頭一頭、目利きが選んだ
                 <br />
@@ -42,11 +42,11 @@ export default function VerticalSection() {
 
             {/* Decorative element */}
             <div className="hidden md:flex flex-col items-center gap-4">
-              <div className="w-px h-24 bg-gradient-to-b from-transparent via-gold/40 to-transparent" />
-              <span className="text-gold/60 text-xs tracking-[0.3em] writing-mode-vertical">
+              <div className="w-px h-24 bg-gradient-to-b from-transparent via-aka/40 to-transparent" />
+              <span className="text-aka text-xs tracking-[0.3em] writing-mode-vertical font-bold">
                 想い
               </span>
-              <div className="w-px h-24 bg-gradient-to-b from-transparent via-gold/40 to-transparent" />
+              <div className="w-px h-24 bg-gradient-to-b from-transparent via-aka/40 to-transparent" />
             </div>
           </motion.div>
 
@@ -69,22 +69,22 @@ export default function VerticalSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-ink/20" />
 
               {/* Overlay border accent */}
-              <div className="absolute inset-4 border border-gold/10" />
+              <div className="absolute inset-4 border border-aka/20" />
             </div>
 
             {/* Text below image */}
             <div className="mt-10 max-w-md mx-auto">
-              <div className="gold-divider mb-6" />
-              <p className="text-washi/60 text-sm leading-relaxed tracking-wider">
+              <div className="aka-divider mb-6" />
+              <p className="text-washi/70 text-sm leading-relaxed tracking-wider">
                 全国の牧場から厳選した黒毛和牛を、
                 最も美味しい状態でご提供いたします。
                 肉の個性を見極め、部位ごとに最適な厚さ、
                 温度でお召し上がりいただけるよう、
                 一切の妥協なく仕立てます。
               </p>
-              <p className="text-washi/40 text-xs mt-4 tracking-wider">
+              <p className="text-washi/50 text-xs mt-4 tracking-wider font-medium">
                 素材の力を信じ、余計なものは加えない。
-                それが「新」の流儀です。
+                それが<span className="text-aka">「新」</span>の流儀です。
               </p>
             </div>
           </motion.div>
