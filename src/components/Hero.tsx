@@ -59,29 +59,39 @@ export default function Hero() {
         animate="visible"
         className="relative z-10 h-full flex flex-col items-center justify-center px-6"
       >
+        {/* Area label */}
+        <motion.p
+          variants={fadeIn}
+          custom={0.2}
+          className="text-gold/70 text-sm md:text-base tracking-[0.4em] font-medium"
+          style={{ animation: "heroFadeIn 1.5s ease-out 0.2s both" }}
+        >
+          大阪京橋
+        </motion.p>
+
+        {/* Main catchcopy */}
+        <motion.h2
+          variants={slideUp}
+          custom={0.5}
+          className="text-washi text-xl md:text-3xl lg:text-4xl tracking-[0.15em] mt-4 font-semibold text-center leading-relaxed"
+          style={{ animation: "heroFadeIn 1.5s ease-out 0.5s both" }}
+        >
+          タンが美味いと噂の大衆焼肉店
+        </motion.h2>
+
         {/* Decorative line */}
         <motion.div
           variants={lineGrow}
-          custom={0}
-          className="w-px h-16 bg-gradient-to-b from-transparent via-gold to-transparent mb-8 origin-top"
-          style={{ animation: "lineGrow 1.5s ease-out forwards" }}
+          custom={0.8}
+          className="w-12 h-px bg-gradient-to-r from-transparent via-gold to-transparent my-6 origin-left"
+          style={{ animation: "lineGrow 1.5s ease-out 0.8s both" }}
         />
-
-        {/* Catchcopy */}
-        <motion.p
-          variants={fadeIn}
-          custom={0.3}
-          className="text-washi/50 text-xs md:text-sm tracking-[0.2em] mb-6"
-          style={{ animation: "heroFadeIn 1.5s ease-out 0.3s both" }}
-        >
-          大阪京橋 タンが美味いと噂の大衆焼肉店
-        </motion.p>
 
         {/* Logo character */}
         <motion.h1
           variants={scaleIn}
-          className="text-gold text-7xl md:text-9xl font-bold mb-4 tracking-widest"
-          style={{ animation: "heroScaleIn 1.2s ease-out 0.5s both" }}
+          className="text-gold text-6xl md:text-8xl font-bold mb-2 tracking-widest"
+          style={{ animation: "heroScaleIn 1.2s ease-out 1s both" }}
         >
           新
         </motion.h1>
@@ -89,30 +99,22 @@ export default function Hero() {
         {/* Subtitle */}
         <motion.p
           variants={fadeIn}
-          custom={1}
-          className="text-washi/60 text-sm md:text-base tracking-[0.5em] mb-2"
-          style={{ animation: "heroFadeIn 1.5s ease-out 1s both" }}
+          custom={1.3}
+          className="text-washi/50 text-xs md:text-sm tracking-[0.5em] mb-6"
+          style={{ animation: "heroFadeIn 1.5s ease-out 1.3s both" }}
         >
           やきにく あらた
         </motion.p>
 
-        {/* Tagline */}
+        {/* Tagline - big & bold */}
         <motion.p
           variants={slideUp}
-          custom={1.5}
-          className="text-washi/60 text-sm md:text-lg tracking-[0.2em] mt-6 font-medium"
-          style={{ animation: "heroFadeIn 1.5s ease-out 1.5s both" }}
+          custom={1.6}
+          className="text-washi text-2xl md:text-4xl lg:text-5xl tracking-[0.1em] mt-2 font-bold"
+          style={{ animation: "heroFadeIn 1.5s ease-out 1.6s both" }}
         >
-          肉でお腹いっぱいに
+          &ldquo;肉でお腹いっぱいに&rdquo;
         </motion.p>
-
-        {/* Decorative line bottom */}
-        <motion.div
-          variants={lineGrow}
-          custom={1.8}
-          className="w-px h-16 bg-gradient-to-b from-gold/50 via-gold/20 to-transparent mt-8 origin-top"
-          style={{ animation: "lineGrow 1.5s ease-out 1.8s both" }}
-        />
 
         {/* Scroll indicator */}
         <motion.div
